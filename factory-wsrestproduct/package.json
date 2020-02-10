@@ -1,0 +1,35 @@
+{
+  "name": "wsrestproducto",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha ./test/router.js",
+    "eslint": "./node_modules/eslint/bin/eslint.js . --ext .js",
+    "run-docker": "docker run -p 3010:3010 -d com.aval.services.products/products"
+  },
+  "dependencies": {
+    "acorn": "^6.0.0",
+    "acorn-jsx": "^5.0.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "^4.17.1",
+    "http-errors": "~1.6.2",
+    "memory-cache": "^0.2.0",
+    "mongodb": "^3.2.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "request": "^2.88.0",
+    "update": "^0.7.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "eslint": "^5.13.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "mocha": "^2.5.3",
+    "sinon": "^6.3.3"
+  }
+}

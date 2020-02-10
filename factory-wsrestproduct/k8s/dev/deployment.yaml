@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: wsrestproducto-deployment
+  namespace: dev
+  labels:
+    app: wsrestproducto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wsrestproducto
+  template:
+    metadata:
+      labels:
+        app: wsrestproducto
+    spec:
+      containers:
+        - name: wsrestproducto
+          image: 638238666448.dkr.ecr.us-east-1.amazonaws.com/ws-rest-producto:latest
+          resources:
+            limits:
+              memory: "500Mi"
+              cpu: "200m"
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 3010
+          envFrom:
+          - configMapRef:
+              name: wsrestproducto-configmap

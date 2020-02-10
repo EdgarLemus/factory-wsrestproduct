@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wsrestproducto-configmap
+  namespace: dev
+data:
+  POC_SERVICE_INVENTORY_HOST: 'ec2-3-17-205-42.us-east-2.compute.amazonaws.com'
+  POC_SERVICE_INVENTORY_PORT: '9443'
+  POC_SERVICE_SECURITY_HOST: 'http://wsrestoauth'
+  POC_SERVICE_SECURITY_PORT: '13010'
+  POC_SERVICE_AUDIT_HOST: 'wsrestauditoriaapi'
+  POC_SERVICE_AUDIT_PORT: '18082'
+  POC_MONGO_HOST : 'mongo'
+  POC_MONGO_PORT : '27017'
+  POC_MONGO_USER : ''
+  POC_MONGO_PASS : ''
+  POC_MONGO_DB : 'sophos_store'
